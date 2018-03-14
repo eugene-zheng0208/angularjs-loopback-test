@@ -1,0 +1,9 @@
+**/node_modules/**
+**/*.log
+**/client/e2e
+**/client/etc
+**/client/dist
+**/client/e2e
+**/.*
+!**/.git*
+!**/.angular*.json

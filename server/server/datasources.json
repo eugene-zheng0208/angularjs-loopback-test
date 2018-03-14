@@ -1,0 +1,15 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "memorydb": {
+    "name": "memorydb",
+    "connector": "memory"
+  },
+  "mongodb": {
+    "name": "mongodb",
+    "connector": "mongodb",
+    "database": "lbng4sample"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "name": "angular4-loopback",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "install:prereq:server": "npm install --prefix ./server",
+    "install:prereq:client": "npm install --prefix ./client",
+    "install:prereq:deps": "npm install",
+    "install:prereq": "npm run install:prereq:deps && npm run install:prereq:server && npm run install:prereq:client",
+    "update:sdk": "lb-sdk ./server/server/server.js ./client/src/app/sdk",
+    "start:server": "npm start --prefix ./server",
+    "start:client": "npm start --prefix ./client",
+    "start": "concurrently --kill-others 'npm run start:server' 'npm run start:client'",
+    "start:fresh": "npm run install:prereq && npm run update:sdk && npm start"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@mean-expert/loopback-sdk-builder": "^2.1.0-rc.10",
+    "concurrently": "^3.4.0"
+  }
+}
